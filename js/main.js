@@ -43,12 +43,10 @@ var writeBerries = function (berry) {
     document.write('<dl>');
     document.write('<dt>Grows on a shrub?</dt>');
 
-    document.write('<dd>');
-
-    if (berry.item.onShrub(true)) {
-      document.write('Yes');
+    if (berry.onShrub) {
+      document.write('<dd>Yes</dd>');
     } else {
-      document.write('No');
+      document.write('<dd>No</dd>');
     }
 
     document.write('<dt>Energy</dt>');
@@ -56,7 +54,7 @@ var writeBerries = function (berry) {
     document.write('<dt>Carbohydrates</dt>');
     document.write('<dd>' + item.carbs + '</dd>');
     document.write('<dt>Protein</dt>');
-    document.write('<dd>' + item.protien + '</dd>');
+    document.write('<dd>' + item.protein + '</dd>');
 
     document.write('</dl>');
   });
